@@ -1,0 +1,122 @@
+@charset "UTF-8";
+@media screen and (max-width: 880px) {
+  /* Removendo o botão de agendamento da nav-bar */
+  .btn-scheduling {
+    display: none;
+  }
+  /* Ajustando o tamanho da caixa dos links */
+  .box-link {
+    width: 80%;
+  }
+  /* Alterando a apresentação da localização no layout flexivo */
+  .map-location {
+    width: initial !important;
+  }
+  .box-location {
+    flex-direction: column-reverse;
+  }
+  .content-location {
+    width: initial !important;
+  }
+  /* Alteração no layout do agendamento da caixa flexiva */
+  .scheduling-titles {
+    height: initial !important;
+  }
+  .scheduling {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 30px;
+  }
+  .img-scheduling {
+    display: none !important;
+  }
+  .img-scheduling,
+  .content-scheduling {
+    width: initial !important;
+  }
+  .btn-scheduling-now button {
+    width: 70% !important;
+  }
+}
+@media screen and (max-width: 712px) {
+  .history-barber {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .box-img-history-barber {
+    width: initial !important;
+  }
+  /* Corrigindo o vazamento do rodapé */
+  .footer {
+    height: 100%;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1111px) {
+  .scheduling {
+    padding: 10%;
+  }
+}
+@media screen and (max-width: 636px) {
+  /* Ajustando a organização da nav-bar */
+  .nav-bar {
+    justify-content: space-between;
+  }
+  /* Removendo a caixa de links da nav-bar */
+  .box-link {
+    display: none;
+  }
+  /* Adicionando o menu de links da nav-bar */
+  .menu-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    row-gap: 10px;
+    height: 55px;
+    width: 50px;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  .menu-link .row {
+    width: 100%;
+    border: 3px solid #FEECB7;
+    border-radius: 10px;
+    padding: 0 3px;
+    transition: 0.2s;
+  }
+  .menu-link.active span:nth-child(1) {
+    transform: translateY(17px) rotate(45deg);
+  }
+  .menu-link.active span:nth-child(3) {
+    transform: translateY(-15px) rotate(-45deg);
+  }
+  .menu-link.active span:nth-child(2) {
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* Deixando os inputs do agendamento um em baixo do outro na caixa flexiva */
+  .scheduling-inputs {
+    flex-direction: column !important;
+  }
+  .scheduling-inputs div {
+    width: 100% !important;
+  }
+  .content-scheduling {
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+  }
+}
+@media screen and (max-width: 421px) {
+  /* Diminuindo o preenchimento da caixa dos estilos de cortes */
+  .container-cuts {
+    padding: 60px !important;
+  }
+  /* Diminuindo a fonte do card de estilo de corte */
+  .content-card-cut > p {
+    font-size: 14px !important;
+  }
+}/*# sourceMappingURL=resp.css.map */
