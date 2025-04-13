@@ -1,0 +1,830 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Nav bar */
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 99px;
+    width: 100%;
+    background-color: #1B1B1B;
+
+    .box-logo {
+        height: 99px;
+        width: 20%;
+        // border: 1px solid red;
+
+        img {
+            height: 100%;
+        }
+    }
+}
+
+
+
+/* Caixa de links da nav-bar */
+
+.box-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    column-gap: 65px;
+    // border: 1px solid yellow;
+
+    li {
+        list-style-type: none;
+        font-size: 17px;
+        font-family: "Poppins", sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        color: #FEECB7;
+    }
+}
+
+/* Caixa de links do menu */
+.box-menu-link {
+    display: none;
+}
+
+/* Configurando a caixa de links do menu */
+.box-menu-link {
+    position: absolute;
+    top: 99px;
+    left: 0;
+    padding: 40px;
+    z-index: 999;
+    width: 100%;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #FEECB7;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+
+        list-style-type: none;
+        row-gap: 40px;
+    }
+
+    ul a {
+        color: black;
+        font-size: 17px;
+        text-decoration: none;
+        font-family: "Montserrat", sans-serif;
+    }
+
+}
+
+
+/* Botão de agendamento da nav-bar */
+
+.btn-scheduling {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // border: 1px solid brown;
+
+    img {
+        height: 20px;
+        width: 20px;
+    }
+
+    button {
+        display: flex;
+        align-items: center;
+        column-gap: 12px;
+
+        padding: 12px 20px;
+        font-size: 20px;
+        border: none;
+        border-radius: 15px;
+        font-family: "Bebas Neue", sans-serif;
+        cursor: pointer;
+        background-color: #8B0000;
+        color: #FEECB7;
+        transition: .2s;
+
+        &:hover {
+            background-color: #610000;
+            scale: 0.99;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+
+
+/* Linha vermelha (apresentação) */
+
+.red-line {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 420px;
+    width: 100%;
+    border: 1px solid gray;
+    background: url("../img/apresentacao.avif");
+    background-size: cover;
+    background-position: top;
+
+    border-top: 1px solid #1B1B1B;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+    z-index: 1;
+
+    /* Conteúdo da apresentação */
+
+    .content-red-line {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 55px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 19px;
+
+        // border: 1px solid black;
+        position: absolute;
+        z-index: 3;
+        color: white;
+
+        h1 {
+            text-align: center;
+            color: #FEECB7;
+        }
+
+        p {
+            color: #FEECB7;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        /* Botão de conhecer a barbearia */
+
+        .box-courteous {
+
+            a {
+                text-decoration: none;
+            }
+
+            button {
+                padding: 12px 20px;
+                border-bottom: 1px solid black;
+                border-radius: 15px;
+                font-size: 22px;
+                font-family: "Bebas Neue", sans-serif;
+                cursor: pointer;
+                background-color: #8B0000;
+                border: 1px solid black;
+                color: #FEECB7;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                transition: .2s background-color;
+
+
+                img {
+                    height: 25px;
+                    width: 30px;
+                }
+
+                &:hover {
+                    background-color: #610000;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    /* Efeito para desvanecer a imagem da apresentação */
+
+    &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: #000000c2;
+
+        z-index: 2;
+    }
+}
+
+
+
+/* História da barbearia */
+
+.history-barber {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    min-height: 520px;
+    background: url("../img/historia.jpg");
+    background-size: cover;
+    background-position: center;
+
+    z-index: 1;
+
+    &:before {
+        position: absolute;
+        content: "";
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(black, rgba(0, 0, 0, 0.725), black)
+    }
+
+    .content-history-barber {
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        row-gap: 25px;
+        height: 100%;
+        // border: 1px solid black;
+        color: white;
+        z-index: 3;
+
+        h2 {
+            font-size: 45px;
+            font-family: "Oswald", sans-serif;
+            color: #FEECB7;
+        }
+
+        p {
+            font-size: 23px;
+        }
+    }
+
+    .box-img-history-barber {
+        height: 350px;
+        width: 50%;
+        z-index: 3;
+
+        img {
+            height: 100%;
+            width: 350px;
+        }
+    }
+}
+
+
+
+/* Tipos de cortes */
+
+.cuts-types {
+    border-top: 1px solid black;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 60px;
+    // border: 1px solid red;
+    min-height: 980px;
+
+    .img-cuts-type {
+        background: url("../img/cortes.jpg");
+        height: 100%;
+        width: 100%;
+
+        &:before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            opacity: .9;
+            background: linear-gradient(black, black, #1B1B1B);
+        }
+    }
+
+    h2 {
+        position: relative;
+        z-index: 2;
+        margin: 70px 20px 0 20px;
+        text-align: center;
+        font-size: 45px;
+        font-family: "Oswald", sans-serif;
+        // border: 1px solid white;
+        color: #C9A94F;
+    }
+
+    .container-cuts {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        column-gap: 20px;
+        min-height: 400px;
+        border: 1px solid black;
+        padding: 100px;
+
+        .card-cut {
+            position: relative;
+            height: 300px;
+            width: 300px;
+            overflow: hidden;
+
+            border-radius: 12px;
+
+            .box-img-cut {
+                background-color: black;
+                border-radius: 10px;
+                z-index: 1;
+                overflow: hidden;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                // border: 1px solid red;
+
+                img {
+                    object-fit: cover;
+                    border-radius: 10px;
+                    background: transparent;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0.9;
+                    transition: scale .2s, opacity .2s;
+                }
+            }
+
+            .content-card-cut {
+                border: 2px solid #C9A94F;
+
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                flex-wrap: wrap;
+                row-gap: 20px;
+                height: 100%;
+                width: 100%;
+                // border: 2px solid #26ff00;
+                border-radius: 12px;
+            }
+
+            &:hover img {
+                scale: 1.03;
+                opacity: .5;
+            }
+
+            &:hover h3,
+            &:hover p {
+                opacity: 1;
+            }
+
+            &:hover .detalhe {
+                opacity: 0;
+            }
+
+            h3 {
+                cursor: default;
+
+                padding-left: 30px;
+                width: 100%;
+                position: relative;
+                z-index: 2;
+                // border: 1px solid red;
+                font-size: 25px;
+                font-family: "Poppins", sans-serif;
+                color: #FEECB7;
+                opacity: 0;
+
+                transition: opacity .2s;
+            }
+
+            p {
+                cursor: default;
+
+                padding-left: 30px;
+                padding-right: 30px;
+
+                position: relative;
+                z-index: 2;
+                font-size: 15px;
+                font-family: "Poppins", sans-serif;
+                color: white;
+                // border: 1px solid red;
+                opacity: 0;
+
+                transition: opacity .2s;
+            }
+
+            .detalhe {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                bottom: 0px;
+                text-shadow: 0 0 2px 2px black;
+                background-color: #C9A94F;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                text-decoration: underline;
+                position: absolute;
+                color: black;
+                height: 30px;
+                width: 100%;
+                // border: 1px solid red;
+                opacity: 1;
+
+                img {
+                    height: 20px;
+                    width: 20px;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Caixa de localização */
+
+.box-location {
+    overflow: hidden;
+    display: flex;
+    min-height: 400px;
+    // border: 1px solid gray;
+    background: linear-gradient(to left, #1B1B1B, #000000, #1B1B1B);
+
+    .content-location {
+        display: flex;
+        flex-direction: column;
+        row-gap: 34px;
+        padding: 30px;
+        width: 30%;
+        height: 100%;
+        // border: 1px solid black;
+
+        h2 {
+            font-size: 34px;
+            color: #FEECB7;
+            font-family: "Oswald", sans-serif;
+        }
+
+        p {
+            font-size: 17px;
+            color: white;
+            font-family: "Montserrat", sans-serif;
+        }
+    }
+
+    .map-location {
+        width: 70%;
+    }
+
+}
+
+
+
+/* Seção de agendamento */
+
+.scheduling {
+    height: 100%;
+
+    .scheduling-warns {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 21px;
+        font-family: "Open Sans", sans-serif;
+        color: #8B0000;
+        font-weight: bold;
+
+        opacity: 0;
+        transition: opacity .2s;
+    }
+
+    position: relative;
+    display: flex;
+    min-height: 500px;
+    flex-direction: row-reverse;
+    padding: 0 30px 0 0;
+    font-family: "Montserrat",
+    sans-serif;
+    background: linear-gradient(#1B1B1B, black);
+    // border: 1px solid red;
+
+    & label {
+        font-size: 16px;
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+        color: #C9A94F;
+    }
+
+    .content-scheduling {
+        width: 60%;
+        // border: 1px solid blue;
+    }
+
+    .scheduling-titles {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        height: 140px;
+        // border: 1px solid red;
+
+        h2 {
+            font-size: 34px;
+            color: #C9A94F;
+            font-family: "Poppins", sans-serif;
+        }
+
+        p {
+            font-size: 25px;
+            color: white;
+            font-family: "Oswald", sans-serif;
+        }
+    }
+
+    .scheduling-inputs {
+        display: flex;
+        height: 250px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        row-gap: 12px;
+        column-gap: 12px;
+        // border: 1px solid yellow;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 12px;
+            justify-content: center;
+            width: 50%;
+            // border: 1px solid greenyellow;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 10px;
+            width: 100%;
+            border: 1px solid black;
+            font-family: "Montserrat", sans-serif;
+            outline: none;
+        }
+
+        textarea {
+            min-width: 100%;
+            max-width: 305px;
+            max-height: 137px;
+            min-height: 47px;
+        }
+    }
+
+    .img-scheduling {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // border: 1px solid green;
+        padding: 30px;
+
+        img {
+            height: 90%;
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+    }
+
+    .btn-scheduling-now {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        // border: 1px solid red;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 12px;
+            text-decoration: none;
+            padding: 12px 20%;
+            font-size: 16px;
+            border-radius: 10px;
+            border: 1px solid black;
+            font-family: "Bebas Naue", sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #8B0000;
+            color: #FEECB7;
+
+            transition: background-color .2s, scale .2s;
+
+            &:hover {
+                background-color: #610000;
+                scale: 0.99;
+            }
+
+            img {
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+}
+
+
+
+/* Seção do rodapé do site */
+
+.box-logo-footer {
+    display: flex;
+    align-items: center;
+    row-gap: 12px;
+    padding: 0 20px;
+
+    background: linear-gradient(to left, #b9b9b9, black);
+
+    height: 100px;
+    width: 100%;
+    // border: 1px solid red;
+
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
+    p {
+        font-size: 22px;
+        color: #C9A94F;
+        font-family: "Oswald", sans-serif;
+    }
+}
+
+.footer {
+    height: 250px;
+    width: 100%;
+    background-color: #1B1B1B;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        padding: 20px;
+        // border: 1px solid yellow;
+
+        h2 {
+            font-size: 30px;
+            color: #FEECB7;
+            font-family: "Bebas Naue", sans-serif;
+        }
+
+        ul li {
+            font-family: "Bebas Naue", sans-serif;
+            color: #b9b9b9;
+            font-size: 17px;
+
+            a {
+                color: #b9b9b9;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .social-footer {
+        // border: 1px solid red;
+
+        a {
+            display: flex;
+            column-gap: 10px;
+            align-items: center;
+
+            // border: 1px solid orange;
+
+            img {
+                // border: 1px solid green;
+
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+}
+
+.autoral-footer {
+    height: 50px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    // border: 1px solid brown;
+
+    background: linear-gradient(#1B1B1B, black);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        color: #C9A94F;
+        font-family: "Bebas Naue", sans-serif;
+        font-size: 15px;
+    }
+}
+
+
+
+/* Suporte do whatsapp */
+
+.contact-whatsapp {
+    height: 200px;
+    width: 100px;
+    // background-color: #8B0000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 1;
+    transition: opacity .2s;
+
+    img {
+        height: 200px;
+        width: 100px;
+    }
+}
+
+
+
+
+/* Efeito tremendo */
+
+@keyframes tremer {
+    0% {
+        transform: translateX(-10px);
+    }
+
+    25% {
+        transform: translateX(10px)
+    }
+
+    50% {
+        transform: translateX(-10px)
+    }
+
+    100% {
+        transform: translateX(10px)
+    }
+}
