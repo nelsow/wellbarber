@@ -252,7 +252,7 @@ font-size: 80px;
   align-items: center;
   justify-content: space-between;
   flex-direction: row-reverse;
-  background: url("../img/cortes.jpg");
+  background: url("../img/bkg.jpg");
   background-size: cover;
   background-position: center;
   z-index: 1;
